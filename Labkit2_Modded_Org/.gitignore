@@ -1,0 +1,11 @@
+CMakeLists.txt
+.pio/
+releases/
+__pycache__/
+sdkconfig.old
+src/config.h
+*.aux
+*.log
+*.pdf
+*.toc
+*.out
