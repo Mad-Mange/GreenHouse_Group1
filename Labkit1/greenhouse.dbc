@@ -1,0 +1,181 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+VAL_TABLE_ valid 1 "OKAY" 0 "UNINITIALIZED" ;
+VAL_TABLE_ terminal 2 "ERROR" 1 "CONNECTED" 0 "DISCONNECTED" ;
+VAL_TABLE_ esp32 6 "MQTT_PUBLISH_ERROR" 5 "MQTT_DISCONNECTED" 4 "WIFI_DISCONNECTED" 3 "NTP_ERROR" 2 "I2C_ERROR" 1 "OKAY" 0 "UNINITIALIZED" ;
+VAL_TABLE_ system 2 "ERROR" 1 "OKAY" 0 "WARNING" ;
+VAL_TABLE_ window 1 "OPEN" 0 "CLOSE" ;
+VAL_TABLE_ status 2 "ERROR" 1 "OKAY" 0 "UNINITIALIZED" ;
+VAL_TABLE_ states 1 "ON" 0 "OFF" ;
+
+
+BO_ 257 com: 8 Vector__XXX
+ SG_ terminal_status : 16|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ sdcard_status : 3|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ sdcard_free_space : 5|11@1+ (1,0) [0|2048] "" Vector__XXX
+ SG_ rtc_year : 19|11@1+ (1,0) [2020|2040] "" Vector__XXX
+ SG_ rtc_status : 18|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ rtc_second : 50|6@1+ (1,0) [0|59] "" Vector__XXX
+ SG_ rtc_month : 30|4@1+ (1,0) [1|12] "" Vector__XXX
+ SG_ rtc_minute : 44|6@1+ (1,0) [0|59] "" Vector__XXX
+ SG_ rtc_hour : 39|5@1+ (1,0) [0|23] "" Vector__XXX
+ SG_ rtc_day : 34|5@1+ (1,0) [1|31] "" Vector__XXX
+ SG_ esp32_status : 0|3@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 263 com_clb2: 8 Vector__XXX
+ SG_ water_volume_calibration_max : 40|13@1+ (1,0) [500|2000] "" Vector__XXX
+ SG_ water_level_target_min : 8|8@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ water_level_target_max : 16|8@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ soil_moisture_target_min : 24|8@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ soil_moisture_target_max : 32|8@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ light_intensity_target_min : 0|8@1+ (1,0) [0|100] "" Vector__XXX
+
+BO_ 262 hmi_clb2: 8 Vector__XXX
+ SG_ water_volume_calibration_max : 40|13@1+ (1,0) [500|2000] "" Vector__XXX
+ SG_ water_level_target_min : 8|8@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ water_level_target_max : 16|8@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ soil_moisture_target_min : 24|8@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ soil_moisture_target_max : 32|8@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ light_intensity_target_min : 0|8@1+ (1,0) [0|100] "" Vector__XXX
+
+BO_ 261 com_clb1: 8 Vector__XXX
+ SG_ temperature_target_min : 30|7@1+ (1,0) [0|50] "" Vector__XXX
+ SG_ temperature_target_max : 37|7@1+ (1,0) [0|50] "" Vector__XXX
+ SG_ temperature_calibration_min : 0|7@1+ (1,0) [0|50] "" Vector__XXX
+ SG_ temperature_calibration_max : 7|7@1+ (1,0) [0|50] "" Vector__XXX
+ SG_ humidity_target_min : 44|8@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ humidity_target_max : 52|8@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ humidity_calibration_min : 14|8@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ humidity_calibration_max : 22|8@1+ (1,0) [0|100] "" Vector__XXX
+
+BO_ 260 hmi_clb1: 8 Vector__XXX
+ SG_ temperature_target_min : 30|7@1+ (1,0) [0|50] "" Vector__XXX
+ SG_ temperature_target_max : 37|7@1+ (1,0) [0|50] "" Vector__XXX
+ SG_ temperature_calibration_min : 0|7@1+ (1,0) [0|50] "" Vector__XXX
+ SG_ temperature_calibration_max : 7|7@1+ (1,0) [0|50] "" Vector__XXX
+ SG_ humidity_target_min : 44|8@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ humidity_target_max : 52|8@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ humidity_calibration_min : 14|8@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ humidity_calibration_max : 22|8@1+ (1,0) [0|100] "" Vector__XXX
+
+BO_ 258 hmi: 8 Vector__XXX
+ SG_ system_status : 46|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ rgb_status : 42|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ eeprom_status : 44|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ buzzer_status : 40|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ keypad_status : 38|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ display_status : 36|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ fans_state : 22|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ window_state : 20|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ water_valve_state : 18|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ water_pump_state : 16|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ heater_warmness : 8|7@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ lamp_shininess : 0|7@1+ (1,0) [0|100] "" Vector__XXX
+
+BO_ 259 act: 8 Vector__XXX
+ SG_ fans_status : 29|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ window_status : 27|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ water_valve_status : 25|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ water_pump_status : 23|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ heater_status : 21|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ lamp_status : 19|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ fans_state : 17|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ window_state : 16|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ water_valve_state : 15|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ water_pump_state : 14|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ heater_warmness : 7|7@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ lamp_shininess : 0|7@1+ (1,0) [0|100] "" Vector__XXX
+
+BO_ 256 sns: 8 Vector__XXX
+ SG_ water_level_sensor_status : 53|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ light_intensity_sensor_status : 51|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ flow_meter_sensor_status : 49|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ dht_sensor_status : 47|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ flow_rate : 17|9@1+ (1,0) [17|500] "" Vector__XXX
+ SG_ water_level : 33|7@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ soil_moisture_sensor_status : 55|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ light_intensity : 26|7@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ humidity : 10|7@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ soil_moisture : 40|7@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ temperature : 0|10@1+ (0.1,0) [0|50] "" Vector__XXX
+
+
+
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_  "CANoeDrift" INT 0 0;
+BA_DEF_ BU_  "CANoeStartDelay" INT 0 0;
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "CANoeJitterMax" 0;
+BA_DEF_DEF_  "CANoeJitterMin" 0;
+BA_DEF_DEF_  "CANoeDrift" 0;
+BA_DEF_DEF_  "CANoeStartDelay" 0;
+VAL_ 257 terminal_status 2 "ERROR" 1 "CONNECTED" 0 "DISCONNECTED" ;
+VAL_ 257 sdcard_status 2 "ERROR" 1 "OKAY" 0 "UNINITIALIZED" ;
+VAL_ 257 rtc_status 1 "OKAY" 0 "UNINITIALIZED" ;
+VAL_ 257 esp32_status 6 "MQTT_PUBLISH_ERROR" 5 "MQTT_DISCONNECTED" 4 "WIFI_DISCONNECTED" 3 "NTP_ERROR" 2 "I2C_ERROR" 1 "OKAY" 0 "UNINITIALIZED" ;
+VAL_ 258 system_status 2 "ERROR" 1 "OKAY" 0 "WARNING" ;
+VAL_ 258 rgb_status 2 "ERROR" 1 "OKAY" 0 "UNINITIALIZED" ;
+VAL_ 258 eeprom_status 2 "ERROR" 1 "OKAY" 0 "UNINITIALIZED" ;
+VAL_ 258 buzzer_status 2 "ERROR" 1 "OKAY" 0 "UNINITIALIZED" ;
+VAL_ 258 keypad_status 2 "ERROR" 1 "OKAY" 0 "UNINITIALIZED" ;
+VAL_ 258 display_status 2 "ERROR" 1 "OKAY" 0 "UNINITIALIZED" ;
+VAL_ 258 fans_state 1 "ON" 0 "OFF" ;
+VAL_ 258 window_state 1 "OPEN" 0 "CLOSE" ;
+VAL_ 258 water_valve_state 1 "ON" 0 "OFF" ;
+VAL_ 258 water_pump_state 1 "ON" 0 "OFF" ;
+VAL_ 259 fans_status 2 "ERROR" 1 "OKAY" 0 "UNINITIALIZED" ;
+VAL_ 259 window_status 2 "ERROR" 1 "OKAY" 0 "UNINITIALIZED" ;
+VAL_ 259 water_valve_status 2 "ERROR" 1 "OKAY" 0 "UNINITIALIZED" ;
+VAL_ 259 water_pump_status 2 "ERROR" 1 "OKAY" 0 "UNINITIALIZED" ;
+VAL_ 259 heater_status 2 "ERROR" 1 "OKAY" 0 "UNINITIALIZED" ;
+VAL_ 259 lamp_status 2 "ERROR" 1 "OKAY" 0 "UNINITIALIZED" ;
+VAL_ 259 fans_state 1 "ON" 0 "OFF" ;
+VAL_ 259 window_state 1 "OPEN" 0 "CLOSE" ;
+VAL_ 259 water_valve_state 1 "ON" 0 "OFF" ;
+VAL_ 259 water_pump_state 1 "ON" 0 "OFF" ;
+VAL_ 256 water_level_sensor_status 2 "ERROR" 1 "OKAY" 0 "UNINITIALIZED" ;
+VAL_ 256 light_intensity_sensor_status 2 "ERROR" 1 "OKAY" 0 "UNINITIALIZED" ;
+VAL_ 256 flow_meter_sensor_status 2 "ERROR" 1 "OKAY" 0 "UNINITIALIZED" ;
+VAL_ 256 dht_sensor_status 2 "ERROR" 1 "OKAY" 0 "UNINITIALIZED" ;
+VAL_ 256 soil_moisture_sensor_status 2 "ERROR" 1 "OKAY" 0 "UNINITIALIZED" ;
+
