@@ -1,0 +1,2 @@
+- labkit1test.slx is the matlab main file, which needs the greenhouse.dbc for the can unpack and can pack blocks (The CAN pack and CAN unpack blocks need to be referencing to its location!)
+- testfile.mldatx is the test file that runs the test harnesses in the main file.
